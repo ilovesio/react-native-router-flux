@@ -127,6 +127,7 @@ export var Stack: StackStatic;
 export type Stack = StackStatic;
 interface StackProps extends React.Props<Stack> {
     navigationBarStyle?: StyleProp<ViewStyle>;
+    headerMode?: HeaderModeType;
 }
 interface StackStatic extends React.ComponentClass<StackProps> { }
 
