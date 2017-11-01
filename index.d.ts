@@ -11,7 +11,7 @@ export type Router = RouterStatic;
 export var Reducer: any;
 export type Reducer = any;
 
-// Router 
+// Router
 interface RouterProps extends React.Props<Router> {
     sceneStyle?: StyleProp<ViewStyle>;
     backAndroidHandler?: Function;
@@ -23,7 +23,6 @@ interface RouterStatic extends React.ComponentClass<RouterProps> { }
 // Scene
 export var Scene: SceneStatic;
 export type Scene = SceneStatic;
-
 interface SceneProps extends React.Props<Scene> {
     key?: string;
     component?: React.ComponentType<any>
@@ -34,7 +33,7 @@ interface SceneProps extends React.Props<Scene> {
     backButtonImage?: string;
     backButtonTintColor?: string;
     drawer?: boolean;
-    failure?: () => void;
+    failure?: Function | string;
     headerBackTitle?: string;
     headerMode?: HeaderModeType;
     hideNavBar?: boolean;
@@ -46,7 +45,7 @@ interface SceneProps extends React.Props<Scene> {
     navigationBarTitleImage?: Image;
     navigationBarTitleImageStyle?: StyleProp<ImageStyle>;
     navTransparent?: boolean;
-    on?: (props: any) => void;
+    on?: Function | string;
     onEnter?: (props: any) => void;
     onExit?: (props: any) => void;
     onLeft?: (props: any) => void;
@@ -57,7 +56,7 @@ interface SceneProps extends React.Props<Scene> {
     renderBackButton?: React.ComponentType<any>
     rightButtonImage?: Image;
     rightButtonTextStyle?: StyleProp<TextStyle>;
-    success?: () => void;
+    success?: Function | string;
     tabs?: boolean;
     title?: string;
     titleStyle?: StyleProp<TextStyle>;
@@ -117,7 +116,7 @@ export type Overlay = OverlayStatic;
 interface OverlayProps extends React.Props<Overlay> { }
 interface OverlayStatic extends React.ComponentClass<SceneProps & OverlayProps> { }
 
-// Lightbox 
+// Lightbox
 export var Lightbox : LightboxStatic;
 export type Lightbox  = LightboxStatic;
 interface LightboxProps extends React.Props<Modal> { }
@@ -126,7 +125,7 @@ interface LightboxStatic extends React.ComponentClass<LightboxProps> { }
 // Stack
 export var Stack: StackStatic;
 export type Stack = StackStatic;
-interface StackProps extends React.Props<Stack> { 
+interface StackProps extends React.Props<Stack> {
     navigationBarStyle?: StyleProp<ViewStyle>;
 }
 interface StackStatic extends React.ComponentClass<StackProps> { }
