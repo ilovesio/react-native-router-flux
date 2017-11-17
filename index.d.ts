@@ -153,7 +153,7 @@ interface ActionsStatic {
 
 }
 interface ActionsGenericStatic extends ActionsStatic {
-    [key: string]: (props?: any) => void;
+    [key: string]: any;
 }
 
 export type ActionConstShort = "jump" | "push" | "replace" | "pop" | "popTo" | "refresh" | "reset";
